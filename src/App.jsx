@@ -20,12 +20,11 @@ function App() {
 
   return (
     <Router>
-      <div className='h-screen flex flex-col bg-n-1'>
+      <div className='min-h-screen flex flex-col bg-n-1'>
         <Navbar />
         <div className='flex-grow mt-24'>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
             <Route path='/products' element={<Product />} />
           </Routes>
         </div>

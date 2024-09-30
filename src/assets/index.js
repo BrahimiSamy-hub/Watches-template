@@ -5,5 +5,6 @@ import product3 from './product3.svg'
 import logo from './logo.svg'
 import cart from './cart.svg'
 import watch from './watch.svg'
+import menu from './menu.svg'
 
-export { hero, cart, logo, product1, product2, product3, watch }
+export { hero, cart, logo, product1, product2, product3, watch, menu }
