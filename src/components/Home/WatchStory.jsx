@@ -1,7 +1,7 @@
 import { watch } from '../../assets'
 const WatchStory = () => {
   return (
-    <section className='flex flex-col md:flex-row items-center justify-center p-6 md:p-12 bg-white'>
+    <section className='flex flex-col md:flex-row items-center justify-center p-6 md:p-12 '>
       <div className='relative'>
         <div className='absolute top-0 left-0 w-32 h-32 bg-orange-300'></div>
         <img

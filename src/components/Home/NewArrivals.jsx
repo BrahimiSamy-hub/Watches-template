@@ -13,7 +13,6 @@ const NewArrivals = () => {
       price: 1150,
       isNew: true,
       imgSrc: product1,
-      highlighted: true, // This will highlight the item like in the image
     },
     {
       name: 'DREYFUSS GOLD',
@@ -30,42 +29,41 @@ const NewArrivals = () => {
   ]
 
   return (
-    <section className='py-12 bg-white'>
+    <section className='py-12 '>
       <div className='text-center mb-8'>
         <h2 className='text-xl font-semibold'>New Arrivals</h2>
-        <div className='w-16 h-1 bg-orange-400 mx-auto mt-2'></div>
+        <div className='w-16 h-1 bg-n-2 mx-auto mt-2'></div>
       </div>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto'>
         {products.map((product, index) => (
           <div
             key={index}
-            className={`p-4 rounded-md shadow-md border ${
-              product.highlighted ? 'bg-orange-300' : 'bg-white'
-            }`}
+            className='pb-4 relative group rounded-md shadow-md bg-white transition-all duration-500 overflow-hidden hover:bg-[#19714999] '
           >
-            <div className='relative'>
+            {/* Background Flooding Effect */}
+            <div className='absolute inset-0 hover:bg-[#1971499]  transform scale-0 group-hover:scale-110 transition-transform duration-500 origin-center'></div>
+
+            <div className='relative z-10'>
               <img
                 src={product.imgSrc}
                 alt={product.name}
-                className='object-contain w-full h-64'
+                className='object-contain w-full h-64 pt-6'
               />
               {product.isNew && (
-                <span className='absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 rounded-md'>
+                <span className='absolute top-0 right-0 bg-red-500 font-bold text-white text-xs px-2 py-1 rounded-tr-md animate-pulse duration-200 transition-transform'>
                   NEW
                 </span>
               )}
             </div>
-            <h3 className='mt-4 text-center font-semibold text-lg'>
+            <h3 className='mt-4 text-center font-semibold text-lg relative z-10 text-black group-hover:text-white'>
               {product.name}
             </h3>
-            <p className='text-center text-orange-500 font-bold text-xl'>
-              ${product.price}
+            <p className='text-center text-n-2 font-bold text-xl relative z-10 group-hover:text-white'>
+              {product.price}
+              <sup>
+                <small>DA</small>
+              </sup>
             </p>
-            {product.highlighted && (
-              <button className='mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-700'>
-                Add to Cart
-              </button>
-            )}
           </div>
         ))}
       </div>

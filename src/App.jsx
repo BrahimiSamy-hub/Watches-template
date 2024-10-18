@@ -25,6 +25,7 @@ function App() {
         <div className='flex-grow mt-24'>
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/about-us' element={<About />} />
             <Route path='/products' element={<Product />} />
           </Routes>
         </div>

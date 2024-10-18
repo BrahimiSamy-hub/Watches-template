@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <footer className='bg-white py-8'>
+    <footer className=' py-8'>
       <div className='max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-4 gap-36 px-6'>
         {/* Our information */}
         <div>
@@ -86,7 +86,7 @@ const Footer = () => {
 
       {/* Bottom Text */}
       <div className='text-center mt-8 text-gray-500 text-sm'>
-        © Bedimcode. All rights reserved
+        © Powered by Pixel. All rights reserved
       </div>
     </footer>
   )
